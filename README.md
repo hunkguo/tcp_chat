@@ -95,7 +95,7 @@ g++ -std=c++11 -pthread client.cpp -o client
 
 2. **发送结构化数据**：使用特殊格式`data:id,value,double_value,string`，例如：
    ```
-data:1,100,3.14,Hello World
+   data:1,100,3.14,Hello World
    ```
    这将发送一个包含ID=1，整数值=100，浮点数值=3.14和字符串="Hello World"的数据结构。
 
@@ -110,7 +110,7 @@ data:1,100,3.14,Hello World
 ## 注意事项
 
 - 当前实现使用IPv4地址，端口固定为7000
-- 心跳间隔设置为60秒（可在`heartbeatThread`函数中修改）
+- 心跳间隔当前设置为60秒（测试用，正常应该是30秒，可在`heartbeatThread`函数中修改）
 - 服务器日志文件默认为`server.log`，可以在`main`函数中修改
 - 系统没有实现消息加密，仅适用于本地测试或可信网络环境
 
